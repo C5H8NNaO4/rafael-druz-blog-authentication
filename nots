@@ -1,0 +1,4 @@
+segurânça da informação sera adotado o bcrypt.js
+
+seções para validar o adm, utilizou express session
+npm i --save express-session

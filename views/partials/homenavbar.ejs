@@ -1,0 +1,17 @@
+
+<nav class="navbar">
+    <h1>Início do blog</h1>
+    <a  href="/">BLOG com node.JS..</a>
+
+    <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+            <a  class="nav-link" href="/">Home</a>
+        </li>
+        <% categories.forEach(category => { %>
+            <li class="nav-item">
+                <a  class="nav-link" href="/category/<%= category.slug %>"><%= category.title %></a>
+            </li>
+        <% }) %>
+    </ul>
+
+</nav>
