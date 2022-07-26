@@ -4,11 +4,9 @@ const  secretjwt  = "jhjsdrrbusfasddgsd";
 function adminAuth(req, res, next){
     if(req.session.user != undefined){
         if (req.session.user.email == 'admin@gmail.com'){
-            const authToken = req.cookies.auth;e
-            
+            const authToken = req.cookies.auth;
             if(authToken != undefined){ 
-                const token = authToken.split(' ')[1]; 
-                jwt.verify(token,secretjwt,(err, decoded) => {
+                jwt.verify(authToken,secretjwt,(err, decoded) => {
                     if(err){
                         res.json({err: 'Invalid token.'})
                     }else{
